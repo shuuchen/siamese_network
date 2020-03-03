@@ -97,7 +97,7 @@ class MadoriDataset(Dataset):
 class TriMadoriDataset(MadoriDataset):
     
     def __init__(self, train=True, test=False):
-        super().__init__(train=True, test=False)
+        super().__init__(train=train, test=test)
        
     # choose triplet (anchor, neg, pos) randomly
     def __getitem__(self, idx):
