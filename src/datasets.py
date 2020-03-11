@@ -58,10 +58,12 @@ class MadoriDataset(Dataset):
     def _aug_img(self, image):
         if random.random() > 0.5:
             image = TF.rotate(image, random.choice([90, 180, 270]))
+        '''
         if random.random() > 0.5:
             image = TF.hflip(image)
         if random.random() > 0.5:
             image = TF.vflip(image)
+        '''
         return image
     
     def _select_img_path(self, unit_path, not_equal_to=None):
